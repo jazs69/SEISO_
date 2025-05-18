@@ -100,15 +100,21 @@ SEISO/
 🔹 Frontend (client/)
 
   src/pages/ — App Pages (Login, Register, Dashboard, VerifyWaste, Home)
+
   src/components/ — Reusable Components (ProtectedRoute, LogoutButton)
+  
   src/context/ — Context API for User State Management
 
 🔹 Backend (server/)
 
   models/ — Mongoose Models (User, Waste, BlacklistToken)
+  
   routes/ — API Routes (user.js, waste.js)
+  
   middleware/ — Authentication Middleware
+  
   utils/ — Utility Functions (e.g., JWT Token Helpers)
+  
   config/ — MongoDB Connection Logic
 
 📜 License
