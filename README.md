@@ -29,7 +29,7 @@ SEISO/
 | Frontend              | Backend                        | Authentication & styling |
 |-----------------------|--------------------------------|----------------|
 | React, Vite, Axios    | Node.js, Express, MongoDB      | JWT, bcrypt    |
-| React Router DOM      | Mongoose, REST API             | HTTP-onl  Cookies, Tailwind CSS |
+| React Router DOM      | Mongoose, REST API             | HTTP-only Cookies, Tailwind CSS |
 
 ---
 
