@@ -18,9 +18,13 @@ function VerifyWaste() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.get("http://localhost:3000/api/waste/verify-waste", wasteId, {
-        withCredentials: true,
-      });
+      await axios.get(
+        `${import.meta.env.VITE_BACKEND_URL}/api/waste/verify-wast`,
+        wasteId,
+        {
+          withCredentials: true,
+        }
+      );
       navigate("/dashboard");
     } catch (err) {
       setError(err.response?.data?.msg || "Verification failed");
