@@ -47,7 +47,6 @@ SEISO/
 
 ### 1. Clone the Repository
 
-```bash
 git clone <your-repo-url>
 cd SEISO
 
