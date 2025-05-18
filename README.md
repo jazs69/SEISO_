@@ -10,7 +10,6 @@ SEISO/
 ├── client/ # React frontend (Vite)
 ├── server/ # Node.js/Express backend
 
-
 ---
 
 ## 🚀 Features
@@ -51,59 +50,65 @@ git clone <your-repo-url>
 cd SEISO
 
 2. Install Dependencies
+
 🔹 Backend
-cd server
-npm install
+
+  cd server
+  npm install
+
 🔹 Frontend
-cd ../client
-npm install
+
+  cd ../client
+  npm install
 
 3. Configure Environment Variables
-Create a .env file inside the server/ folder:
-MONGODB_URI=<your-mongodb-uri>
-JWT_SECRET=<your-jwt-secret>
-NODE_ENV=development
+
+  Create a .env file inside the server/ folder:
+
+  MONGODB_URI=<your-mongodb-uri>
+  JWT_SECRET=<your-jwt-secret>
+  NODE_ENV=development
 
 4. Run the Application
+
 🔸 Start Backend
-cd server
-node index.js
+  cd server
+  node index.js
+
 🔸 Start Frontend
-cd ../client
-npm run dev
+  cd ../client
+  npm run dev
 
 🔗 URLs
-Frontend: http://localhost:5173
 
-Backend: http://localhost:3000
+  Frontend: http://localhost:5173
+  Backend: http://localhost:3000
 
 🗂 Folder Overview
+
 🔹 Frontend (client/)
-src/pages/ — App Pages (Login, Register, Dashboard, VerifyWaste, Home)
 
-src/components/ — Reusable Components (ProtectedRoute, LogoutButton)
-
-src/context/ — Context API for User State Management
+  src/pages/ — App Pages (Login, Register, Dashboard, VerifyWaste, Home)
+  src/components/ — Reusable Components (ProtectedRoute, LogoutButton)
+  src/context/ — Context API for User State Management
 
 🔹 Backend (server/)
-models/ — Mongoose Models (User, Waste, BlacklistToken)
 
-routes/ — API Routes (user.js, waste.js)
-
-middleware/ — Authentication Middleware
-
-utils/ — Utility Functions (e.g., JWT Token Helpers)
-
-config/ — MongoDB Connection Logic
+  models/ — Mongoose Models (User, Waste, BlacklistToken)
+  routes/ — API Routes (user.js, waste.js)
+  middleware/ — Authentication Middleware
+  utils/ — Utility Functions (e.g., JWT Token Helpers)
+  config/ — MongoDB Connection Logic
 
 📜 License
-This project is licensed under the MIT License.
+
+  This project is licensed under the MIT License.
 
 📌 Note
-Before running the backend, update your MongoDB URI and JWT secret in the .env file.
+
+  Before running the backend, update your MongoDB URI and JWT secret in the .env file.
 
 Built with 💚 to inspire eco-conscious actions.
-
 
 ---
 
