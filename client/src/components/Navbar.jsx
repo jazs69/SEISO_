@@ -7,9 +7,9 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="text-white px-0 py-10 flex justify-between items-center">
+    <nav className="fixed top-0 left-0 text-white px-0 py-10 flex justify-between items-center">
       {/* Logo */}
-      <div className="w-52 xl:w-1/5">
+      <div className="w-60 xl:w-1/5">
         <img src={SeisoLogo} alt="" />
       </div>
 
