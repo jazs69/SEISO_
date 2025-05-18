@@ -47,19 +47,22 @@ SEISO/
 
 ### 1. Clone the Repository
 
-git clone <your-repo-url>
-cd SEISO
+  git clone <your-repo-url>
+
+  cd SEISO
 
 ### 2. Install Dependencies
 
 🔹 Backend
 
   cd server
+
   npm install
 
 🔹 Frontend
 
   cd ../client
+
   npm install
 
 ### 3. Configure Environment Variables
@@ -67,22 +70,29 @@ cd SEISO
   Create a .env file inside the server/ folder:
 
   MONGODB_URI=<your-mongodb-uri>
+
   JWT_SECRET=<your-jwt-secret>
+
   NODE_ENV=development
 
 ### 4. Run the Application
 
 🔸 Start Backend
+
   cd server
+
   node index.js
 
 🔸 Start Frontend
+
   cd ../client
+
   npm run dev
 
 🔗 URLs
 
   Frontend: http://localhost:5173
+  
   Backend: http://localhost:3000
 
 🗂 Folder Overview
