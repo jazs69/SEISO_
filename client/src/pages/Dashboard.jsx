@@ -1,3 +1,4 @@
+import Navbar from "../components/Navbar";
 import { useUser } from "../context/UserContext";
 
 const Dashboard = () => {
@@ -5,6 +6,7 @@ const Dashboard = () => {
 
   return (
     <div>
+      <Navbar />
       <h1>Welcome, {user?.username || "Guest"}!</h1>
       <p>Your seiso amount: {user?.seisoAmount || 0}</p>
       <p>Your seiso coins: {user?.seisoCoins || 0}</p>

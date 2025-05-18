@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -5,7 +7,8 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* background-color: #242424; */
+  background-color: #151515;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -24,10 +27,11 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+  /* display: flex;
+  place-items: center; */
   min-width: 320px;
   min-height: 100vh;
+  padding: 0 8vw 0 8vw;
 }
 
 h1 {
@@ -46,6 +50,13 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
+@media screen and (max-width: 600px) {
+  body {
+    padding: 0 3vw 0 3vw;
+  }
+}
+
 button:hover {
   border-color: #646cff;
 }

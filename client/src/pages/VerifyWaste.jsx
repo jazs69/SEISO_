@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useUser } from "../context/UserContext";
 import { useNavigate } from "react-router-dom";
+import Navbar from "../components/Navbar";
 
 function VerifyWaste() {
   const { user } = useUser();
@@ -28,6 +29,7 @@ function VerifyWaste() {
 
   return (
     <div>
+      <Navbar />
       <div className="min-h-screen flex items-center justify-center bg-gray-100">
         <form
           onSubmit={handleSubmit}
