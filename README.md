@@ -1,90 +1,110 @@
-SEISO
+# ♻️ SEISO — Smart Waste Management & Reward System
 
-SEISO is a full-stack web application for waste management and user rewards, built with React (frontend) and Node.js/Express/MongoDB (backend).
+**SEISO** is a full-stack MERN web application designed to encourage waste management through a user reward system. Users can register, log waste data, and earn coins for contributing to a cleaner environment.
 
-Project Structure
+---
 
-client/   # React frontend
-server/   # Node.js/Express backend
+## 📁 Project Structure
 
-Features
+SEISO/
+├── client/ # React frontend (Vite)
+├── server/ # Node.js/Express backend
 
-User registration and login with JWT authentication
-Waste registration and verification
-User dashboard with seiso amount and coins
-Protected routes for authenticated users
-Logout with token blacklisting
 
-Tech Stack
+---
 
-Frontend: React, React Router, Axios, Vite
-Backend: Node.js, Express, MongoDB, Mongoose, JWT, bcrypt
-Authentication: JWT with HTTP-only cookies and token blacklist
+## 🚀 Features
 
-Getting Started
+- ✅ User Registration & Login (JWT-based Authentication)
+- ♻️ Waste Submission & Admin Verification
+- 👤 User Dashboard with Seiso Points & Coins
+- 🔒 Protected Routes for Authenticated Users
+- 🚪 Secure Logout with Token Blacklisting
 
-Prerequisites
+---
 
-Node.js (v18+ recommended)
-npm
-MongoDB Atlas or local MongoDB
+## 🛠️ Tech Stack
 
-Setup
+| Frontend              | Backend                        | Authentication |
+|-----------------------|--------------------------------|----------------|
+| React, Vite, Axios    | Node.js, Express, MongoDB      | JWT, bcrypt    |
+| React Router DOM      | Mongoose, REST API             | HTTP-only Cookies |
 
-1. Clone the repository
+---
+
+## ⚙️ Getting Started
+
+### ✅ Prerequisites
+
+- [Node.js](https://nodejs.org/) (v18+ recommended)
+- [npm](https://www.npmjs.com/)
+- MongoDB Atlas or local MongoDB instance
+
+---
+
+## 🧩 Setup Instructions
+
+### 1. Clone the Repository
+
+```bash
 git clone <your-repo-url>
 cd SEISO
 
-2. Install dependencies
-
-Backend:
-
+2. Install Dependencies
+🔹 Backend
 cd server
 npm install
-
-Frontend:
-
+🔹 Frontend
 cd ../client
 npm install
 
 3. Configure Environment Variables
-
-Create a .env file in the server/ directory:
-
+Create a .env file inside the server/ folder:
 MONGODB_URI=<your-mongodb-uri>
 JWT_SECRET=<your-jwt-secret>
 NODE_ENV=development
 
 4. Run the Application
-   
-Start the backend:
-
+🔸 Start Backend
 cd server
 node index.js
-
-Start the frontend:
-
+🔸 Start Frontend
 cd ../client
 npm run dev
 
+🔗 URLs
 Frontend: http://localhost:5173
+
 Backend: http://localhost:3000
 
-Folder Structure
+🗂 Folder Overview
+🔹 Frontend (client/)
+src/pages/ — App Pages (Login, Register, Dashboard, VerifyWaste, Home)
 
-client/ — React app source code
-src/pages/ — Page components (Login, Register, Dashboard, VerifyWaste, Home)
-src/components/ — Reusable components (ProtectedRoute, LogoutButton)
-src/context/ — React context for user state
-server/ — Express backend
-models/ — Mongoose models (User, Waste, BlacklistToken)
-routes/ — Express routes (user.js, waste.js)
-middleware/ — Authentication middleware
-utils/ — Utility functions (JWT token generation)
-config/ — Database connection
+src/components/ — Reusable Components (ProtectedRoute, LogoutButton)
 
-License 
+src/context/ — Context API for User State Management
 
-MIT
+🔹 Backend (server/)
+models/ — Mongoose Models (User, Waste, BlacklistToken)
 
-Note: Update MongoDB URI and JWT secret in your .env file before running the backend.
+routes/ — API Routes (user.js, waste.js)
+
+middleware/ — Authentication Middleware
+
+utils/ — Utility Functions (e.g., JWT Token Helpers)
+
+config/ — MongoDB Connection Logic
+
+📜 License
+This project is licensed under the MIT License.
+
+📌 Note
+Before running the backend, update your MongoDB URI and JWT secret in the .env file.
+
+Built with 💚 to inspire eco-conscious actions.
+
+
+---
+
+Let me know if you'd like to include badges (like for license, build status, etc.) or contribution guidelines.
