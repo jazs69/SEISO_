@@ -45,11 +45,10 @@ SEISO/
 
 ### 1. Clone the Repository
 
-```bash
 git clone <your-repo-url>
 cd SEISO
 
-2. Install Dependencies
+### 2. Install Dependencies
 
 🔹 Backend
 
@@ -61,7 +60,7 @@ cd SEISO
   cd ../client
   npm install
 
-3. Configure Environment Variables
+### 3. Configure Environment Variables
 
   Create a .env file inside the server/ folder:
 
@@ -69,7 +68,7 @@ cd SEISO
   JWT_SECRET=<your-jwt-secret>
   NODE_ENV=development
 
-4. Run the Application
+### 4. Run the Application
 
 🔸 Start Backend
   cd server
