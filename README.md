@@ -26,10 +26,10 @@ SEISO/
 
 ## 🛠️ Tech Stack
 
-| Frontend              | Backend                        | Authentication |
+| Frontend              | Backend                        | Authentication & styling |
 |-----------------------|--------------------------------|----------------|
 | React, Vite, Axios    | Node.js, Express, MongoDB      | JWT, bcrypt    |
-| React Router DOM      | Mongoose, REST API             | HTTP-only Cookies |
+| React Router DOM      | Mongoose, REST API             | HTTP-onl  Cookies, Tailwind CSS |
 
 ---
 
