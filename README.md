@@ -7,8 +7,8 @@
 ## 📁 Project Structure
 
 SEISO/
-├── client/ # React frontend (Vite)
-├── server/ # Node.js/Express backend
+  ├── client/ # React frontend (Vite)
+  ├── server/ # Node.js/Express backend
 
 ---
 
