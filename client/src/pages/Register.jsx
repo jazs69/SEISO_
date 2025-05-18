@@ -24,7 +24,7 @@ const Register = () => {
     e.preventDefault();
     try {
       await axios.post(
-        `${import.meta.env.VITE_BACKEND_URL}/users/register`,
+        `${import.meta.env.VITE_BACKEND_URL}/api/users/register`,
         formData
       );
       navigate("/register");
