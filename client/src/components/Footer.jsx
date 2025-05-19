@@ -97,6 +97,7 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
+import { Instagram, Facebook, Youtube } from "lucide-react";
 
 function Footer() {
   return (
@@ -130,6 +131,35 @@ function Footer() {
             {" "}
             Seiso Job Board{" "}
           </Link>
+        </div>
+        <div className="flex flex-col gap-y-2">
+          <h3 className="text-[34px] pb-2"> Follow us </h3>
+          <div className="flex gap-10">
+            <a
+              href="https://www.instagram.com/seiso.in_/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-proxima text-[21px] h-[33px] border-b border-b-[#999] w-fit"
+            >
+              <Instagram />
+            </a>
+            <a
+              href="https://www.facebook.com/profile.php?id=61576157545684"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-proxima text-[21px] h-[33px] border-b border-b-[#999] w-fit"
+            >
+              <Facebook />
+            </a>
+            <a
+              href="https://www.facebook.com/profile.php?id=61576157545684"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-proxima text-[21px] h-[33px] border-b border-b-[#999] w-fit"
+            >
+              <Youtube />
+            </a>
+          </div>
         </div>
       </div>
       <div className="h-1 bg-gradient-to-r to-black via-lime-200 from-lime-600"></div>
