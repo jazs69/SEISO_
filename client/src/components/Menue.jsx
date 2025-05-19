@@ -23,7 +23,7 @@ function Menue({ setIsOpen }) {
       </button>
 
       {/* Navigation Links */}
-      <div className="flex flex-col items-center justify-center h-full space-y-8 text-xl">
+      <div className="flex flex-col items-center justify-center h-full space-y-8 text-3xl">
         <Link to="/" onClick={() => setIsOpen(false)}>
           Home
         </Link>
