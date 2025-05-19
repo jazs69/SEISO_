@@ -8,7 +8,7 @@ function Home() {
     <div>
       <Navbar />
       <main className="relative w-full h-full">
-        <div className="bg-white">
+        <div className="">
           <div className="w-full h-[100svh] min-h-[735px] max-h-[1000px] bg-midnight pt-[150px] sm:pt-[200px] text-white antialiased">
             <div className="container mx-auto pb-12 px-[1rem]">
               <p className="font-mono tracking-wider leading-[1.75em] text-[18px] md:w-[50%] font-light max-w-[600px]">
