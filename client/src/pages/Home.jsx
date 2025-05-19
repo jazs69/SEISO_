@@ -7,7 +7,7 @@ import Footer from "../components/Footer";
 function Home() {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <main className="relative w-full h-full">
         <div className="">
           <div className="w-full h-[100svh] min-h-[735px] max-h-[1000px] bg-midnight pt-[150px] sm:pt-[200px] text-white antialiased">
@@ -220,7 +220,7 @@ function Home() {
           </div>
         </footer>
       </div> */}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
