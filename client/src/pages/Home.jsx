@@ -34,13 +34,14 @@ function Home() {
           <div className="container mx-auto px-[1rem] flex flex-col gap-y-12 lg:grid lg:grid-cols-[0.2fr_0.8fr] py-16 lg:py-[150px] antialiased border-b border-b-[#eee]">
             <h2 className="text-[34px] select-none">What ?</h2>
             <p className="text-[22px] sm:text-[32px] tracking-[0.2px] leading-[1.4em]">
-              Founded by Jayesh Yadav in 2024, Seiso is an impact-driven startup
-              transforming waste disposal through smart, IoT-enabled dustbins
-              and a reward-based digital ecosystem. Our mission is to make
-              sustainability effortless by integrating technology, behavioral
-              change, and real-world incentives. With our doorstep waste
-              collection service, you no longer need to step out—Seiso comes to
-              you. Clean living, delivered.
+              Founded by Jayesh Yadav, Raj Bhargava and Deepak Vishwakarma in
+              2024, Seiso is an impact-driven startup transforming waste
+              disposal through smart, IoT-enabled dustbins and a reward-based
+              digital ecosystem. Our mission is to make sustainability
+              effortless by integrating technology, behavioral change, and
+              real-world incentives. With our doorstep waste collection service,
+              you no longer need to step out—Seiso comes to you. Clean living,
+              delivered.
             </p>
           </div>
           <div className="container mx-auto antialiased">

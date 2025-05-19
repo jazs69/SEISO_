@@ -101,31 +101,31 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <footer>
-      <div class="flex flex-col gap-y-12 sm:grid sm:grid-cols-2 items-start h-fit w-full px-6 py-24">
-        <div class="flex flex-col gap-y-6">
-          <h3 class="text-[34px] pb-2"> Contact </h3>
+      <div className="flex flex-col gap-y-12 sm:grid sm:grid-cols-2 items-start h-fit w-full px-6 py-24">
+        <div className="flex flex-col gap-y-6">
+          <h3 className="text-[34px] pb-2"> Contact </h3>
           <a
             href="seisoglobal@gmail.com"
             rel="noopener noreferrer"
-            class="font-proxima text-[24px] h-[35px] border-b border-b-[#999] w-fit"
+            className="font-proxima text-[24px] h-[35px] border-b border-b-[#999] w-fit"
           >
             {" "}
             seisoglobal@gmail.com{" "}
           </a>
-          <p class="font-proxima text-[18px]"> +91 7004099889 </p>
+          <p className="font-proxima text-[18px]"> +91 7004099889 </p>
         </div>
-        <div class="flex flex-col gap-y-2">
-          <h3 class="text-[34px] pb-2"> Navigate </h3>
+        <div className="flex flex-col gap-y-2">
+          <h3 className="text-[34px] pb-2"> Navigate </h3>
           <Link
             to="/verify-waste"
-            class="font-proxima text-[21px] h-[33px] border-b border-b-[#999] w-fit"
+            className="font-proxima text-[21px] h-[33px] border-b border-b-[#999] w-fit"
           >
             {" "}
             Verify Waste{" "}
           </Link>
           <Link
             to="/jobs"
-            class="font-proxima text-[21px] h-[33px] border-b border-b-[#999] w-fit"
+            className="font-proxima text-[21px] h-[33px] border-b border-b-[#999] w-fit"
           >
             {" "}
             Seiso Job Board{" "}
