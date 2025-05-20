@@ -1,10 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { X } from "lucide-react";
+import { useUser } from "../context/UserContext";
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
 
 function Menue({ setIsOpen }) {
+  const { user } = useUser();
+
   return (
     <motion.div
       initial={{ opacity: 0, y: "100%" }}
