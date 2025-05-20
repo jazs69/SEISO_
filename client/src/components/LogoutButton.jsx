@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { UserDataContext } from "../contexts/UserContext";
+import { UserDataContext } from "../context/UserContext";
 
 const LogoutButton = () => {
   const navigate = useNavigate();
@@ -12,7 +12,7 @@ const LogoutButton = () => {
       const token = localStorage.getItem("token");
 
       await axios.post(
-        `http://localhost:3000/api/users/logout`,
+        `${import.meta.env.VITE_BACKEND_URL}/api/users/logout`,
         {},
         {
           headers: {
