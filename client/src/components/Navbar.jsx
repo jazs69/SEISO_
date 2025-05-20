@@ -4,25 +4,40 @@ import SeisoLogo from "../assets/SeisoLogo.svg";
 import { Link } from "react-router-dom";
 import Menue from "./Menue";
 import { AnimatePresence } from "framer-motion";
+import { useUser } from "../context/UserContext";
 
 const Navbar = () => {
+  const { user } = useUser();
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
-      <nav className="fixed w-full top-0 left-0 text-white px-[3vw] xl:px-[8vw] py-10 flex justify-between items-center bg-[#151515] z-50">
+      <nav className="fixed w-full top-0 left-0 text-white px-[3vw] xl:px-[8vw] py-10 flex justify-between items-center bg-[#151515] opacity-99 z-50">
         {/* Logo */}
-        <div className="w-56 xl:w-1/5">
+        <Link to="/" className="w-56 xl:w-1/5">
           <img src={SeisoLogo} alt="Seiso Logo" />
-        </div>
+        </Link>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex space-x-6 text-lg">
+        <div className="hidden md:flex items-center space-x-6 text-lg">
+          <Link to="/" className="hover:text-gray-300">
+            Home
+          </Link>
           <Link to="/faq" className="hover:text-gray-300">
             FAQ
           </Link>
           <Link to="/verify-waste" className="hover:text-gray-300">
             Verify Waste
+          </Link>
+          <Link
+            to={user ? "/profile" : "/login"}
+            className="hover:text-gray-300"
+          >
+            {!user ? (
+              "Login"
+            ) : (
+              <div className="h-15 w-15 border-2 border-white rounded-[50%]"></div>
+            )}
           </Link>
         </div>
 

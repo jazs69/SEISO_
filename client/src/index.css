@@ -27,7 +27,7 @@ body {
   place-items: center; */
   min-width: 320px;
   min-height: 100vh;
-  padding: 0 8vw 0 8vw;
+  padding: 0 0vw 0 0vw;
 }
 
 h1 {

@@ -4,8 +4,7 @@ import Navbar from "../components/Navbar";
 function Faq() {
   return (
     <div>
-      <Navbar />
-      <main class="relative w-full h-full">
+      <main class="relative w-full h-full bg-[#151515] opacity-90 px-[8vw]">
         <div class="">
           <div class="flex w-full h-[100svh] max-h-[1000px] bg-midnight text-white antialiased">
             <div class="self-center container mx-auto px-[1em] h-fit py-12">

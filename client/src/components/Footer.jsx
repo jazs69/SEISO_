@@ -102,7 +102,7 @@ import { Instagram, Facebook, Youtube } from "lucide-react";
 function Footer() {
   return (
     <footer>
-      <div className="flex flex-col gap-y-12 sm:grid sm:grid-cols-3 items-start h-fit w-full px-6 py-24">
+      <div className="flex flex-col gap-y-12 sm:grid sm:grid-cols-3 items-start h-fit w-full px-[8vw] py-24 bg-[#151515] opacity-90">
         <div className="flex flex-col gap-y-6">
           <h3 className="text-[34px] pb-2"> Contact </h3>
           <a

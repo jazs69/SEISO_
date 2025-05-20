@@ -33,14 +33,13 @@ function VerifyWaste() {
 
   return (
     <div>
-      <Navbar />
       <div className="min-h-screen flex items-center justify-center">
         <form
           onSubmit={handleSubmit}
           className="p-8 rounded shadow-md w-full max-w-md"
         >
-          <h2 className="text-2xl font-bold mb-6 text-center">
-            Hello {user.firstname}! please insert verification code.
+          <h2 className="font-mono tracking-wider leading-[1.75em] text-[18px] md:w-[50%] font-light max-w-[600px]">
+            Hello Jayesh{}! please insert verification code.
           </h2>
           {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
           <input
