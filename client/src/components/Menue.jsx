@@ -4,6 +4,7 @@ import { X } from "lucide-react";
 import { useUser } from "../context/UserContext";
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
+import LogoutButton from "./LogoutButton";
 
 function Menue({ setIsOpen }) {
   const { user } = useUser();
@@ -30,6 +31,13 @@ function Menue({ setIsOpen }) {
         <Link to="/" onClick={() => setIsOpen(false)}>
           Home
         </Link>
+        <Link
+          to="/Login"
+          onClick={() => setIsOpen(false)}
+          className={`${user ? "hidden" : ""}`}
+        >
+          Login
+        </Link>
         <Link to="/faq" onClick={() => setIsOpen(false)}>
           FAQ
         </Link>
@@ -39,6 +47,7 @@ function Menue({ setIsOpen }) {
         <Link to="/jobs" onClick={() => setIsOpen(false)}>
           Jobs
         </Link>
+        <LogoutButton />
       </div>
     </motion.div>
   );
