@@ -1,11 +1,11 @@
-import React, { useContext } from "react";
+import React from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { UserDataContext } from "../context/UserContext";
+import { useUser } from "../context/UserContext";
 
 const LogoutButton = () => {
   const navigate = useNavigate();
-  const { setUser } = useContext(UserDataContext);
+  const { setUser } = useUser();
 
   const handleLogout = async () => {
     try {
