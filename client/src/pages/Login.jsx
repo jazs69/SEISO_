@@ -40,10 +40,7 @@ const Login = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#151515] opacity-90 px-[8vw]">
-      <form
-        onSubmit={handleSubmit}
-        className="p-8 rounded shadow-md w-full max-w-md"
-      >
+      <form onSubmit={handleSubmit} className="p-8 rounded w-full max-w-md">
         <h2 className="text-2xl font-bold mb-6 text-center">Login</h2>
         {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
         <input
