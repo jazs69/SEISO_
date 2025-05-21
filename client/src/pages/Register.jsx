@@ -34,14 +34,14 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col-reverse md:flex-row bg-[#151515] opacity-90 px-[8vw] ">
-      <div className="hidden md:flex flex-col justify-center items-center w-full max-w-xl mx-auto mt-20">
+    <div className="min-h-screen flex flex-col-reverse md:flex-row items-center justify-center bg-[#151515] opacity-90 px-[8vw] ">
+      <div className="hidden md:flex flex-col justify-center items-center w-full max-w-xl mx-auto md:mt-20">
         <p className="font-mono tracking-wider leading-[1.75em] text-[18px] md:text-[28px] md:w-[50%] font-light max-w-[600px]">
           Seiso rewards you for the responsible disposal of your waste, Creating
           waste into opportunity.
         </p>
       </div>
-      <div className="flex flex-col justify-center items-center w-full max-w-xl mx-auto md:p-8 mt-20">
+      <div className="flex flex-col justify-center items-center w-full max-w-xl mx-auto md:p-8 md:mt-20">
         <form
           onSubmit={handleSubmit}
           className="flex flex-col w-full max-w-md md:p-8"
