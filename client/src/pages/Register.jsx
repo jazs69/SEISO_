@@ -27,7 +27,7 @@ const Register = () => {
         `${import.meta.env.VITE_BACKEND_URL}/api/users/register`,
         formData
       );
-      navigate("/register");
+      navigate("/");
     } catch (err) {
       setError(err.response?.data?.msg || "Registration failed");
     }
