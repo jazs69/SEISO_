@@ -4,12 +4,14 @@ const { connectDB } = require("./config/db");
 const userRoutes = require("./routes/user");
 const cors = require("cors");
 const wasteRoutes = require("./routes/waste");
+const cookieParser = require("cookie-parser");
 
 const app = express();
 
 // Middleware for parsing JSON and urlencoded data
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cookieParser());
 
 // Connect to the database
 connectDB()

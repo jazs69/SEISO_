@@ -32,15 +32,14 @@ function VerifyWaste() {
   };
 
   return (
-    <div>
-      <div className="min-h-screen flex items-center justify-center">
-        <form
-          onSubmit={handleSubmit}
-          className="p-8 rounded shadow-md w-full max-w-md"
-        >
-          <h2 className="font-mono tracking-wider leading-[1.75em] text-[18px] md:w-[50%] font-light max-w-[600px]">
-            Hello Jayesh{}! please insert verification code.
-          </h2>
+    <div className="min-h-screen flex flex-col md:flex-row items-center justify-center bg-[#151515] opacity-90 px-[8vw] ">
+      <div className="flex flex-col justify-center items-center w-full max-w-xl mx-auto mt-20">
+        <p className="font-mono tracking-wider leading-[1.75em] text-[18px] md:text-[28px] md:w-[50%] font-light max-w-[600px]">
+          Hello {user.username}! please insert verification code.
+        </p>
+      </div>
+      <div className="flex flex-col justify-center items-center w-full max-w-xl mx-auto md:p-8 mt-20">
+        <form onSubmit={handleSubmit} className="">
           {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
           <input
             type="text"

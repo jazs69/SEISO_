@@ -27,9 +27,9 @@ function App() {
       <Route
         path="/verify-waste"
         element={
-          // <ProtectedRoute>
-          <VerifyWaste />
-          // </ProtectedRoute>
+          <ProtectedRoute>
+            <VerifyWaste />
+          </ProtectedRoute>
         }
       />
     </Routes>

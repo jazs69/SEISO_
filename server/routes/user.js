@@ -49,13 +49,18 @@ router.post("/login", async (req, res) => {
 });
 
 router.post("/logout", authUser, async (req, res) => {
-  const token = req.cookies.token || req.headers.authorization?.split(" ")[1];
+  try {
+    const token = req.cookies.token || req.headers.authorization?.split(" ")[1];
 
-  if (!token) return res.status(400).json({ message: "Token required" });
+    if (!token) return res.status(400).json({ message: "Token required" });
 
-  await BlacklistToken.create({ token });
+    await BlacklistToken.create({ token });
 
-  res.status(200).json({ message: "Logged out successfully" });
+    res.status(200).json({ message: "Logged out successfully" });
+  } catch (err) {
+    console.error("Logout error:", err); // Add this for debugging
+    res.status(500).json({ message: "Server error during logout" });
+  }
 });
 
 module.exports = router;
