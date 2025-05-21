@@ -41,7 +41,7 @@ const Login = () => {
 
   return (
     <div className="min-h-screen flex flex-col md:flex-row items-center justify-center bg-[#151515] opacity-90 px-[8vw] ">
-      <div className="flex flex-col justify-center items-center w-full max-w-xl mx-auto mt-40">
+      <div className="flex flex-col justify-center items-center w-full max-w-xl mx-auto mt-20">
         <p className="font-mono tracking-wider leading-[1.75em] text-[18px] md:text-[28px] md:w-[50%] font-light max-w-[600px]">
           Join the movement. Clean the world, one waste submission at a time.
         </p>
