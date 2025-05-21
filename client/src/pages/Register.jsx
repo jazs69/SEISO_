@@ -62,7 +62,7 @@ const Register = () => {
           <input
             type="text"
             name="lastname"
-            placeholder="First Name"
+            placeholder="Last Name"
             value={formData.lastname}
             onChange={handleChange}
             className="w-full mb-4 p-2 border border-gray-300 rounded"
