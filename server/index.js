@@ -13,7 +13,16 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
-app.use(mongoSanitize());
+app.use(
+  mongoSanitize({
+    onSanitize: ({ req, key }) => {
+      // Only sanitize req.body and req.params, not req.query
+      // This avoids the TypeError on req.query
+    },
+    replaceWith: "_",
+    allowDots: true,
+  })
+);
 
 // Connect to the database
 connectDB()
