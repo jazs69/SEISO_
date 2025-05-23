@@ -106,72 +106,75 @@ import { Instagram, Facebook, Youtube } from "lucide-react";
 function Footer() {
   return (
     <footer>
-      <div className="flex flex-col gap-y-12 sm:grid sm:grid-cols-3 items-start h-fit w-full px-[8vw] py-24 bg-[#151515] opacity-90">
-        <div className="flex flex-col gap-y-6">
-          <h3 className="text-[34px] pb-2"> Contact </h3>
+      <div className="flex flex-col gap-y-12 sm:grid sm:grid-cols-2 lg:grid-cols-3 items-start h-fit w-full px-4 sm:px-8 md:px-[8vw] py-12 md:py-24 bg-[#151515] opacity-90">
+        <div className="flex flex-col gap-y-4 md:gap-y-6 w-full">
+          <h3 className="text-2xl md:text-[34px] pb-1 md:pb-2">Contact</h3>
           <a
-            href="seisoglobal@gmail.com"
+            href="mailto:seisoglobal@gmail.com"
             rel="noopener noreferrer"
-            className="font-proxima text-[24px] h-[35px] border-b border-b-[#999] w-fit"
+            className="font-proxima text-base md:text-[24px] h-[30px] md:h-[35px] border-b border-b-[#999] w-fit"
           >
-            {" "}
-            seisoglobal@gmail.com{" "}
+            seisoglobal@gmail.com
           </a>
-          <p className="font-proxima text-[18px]"> +91 7004099889 </p>
+          <p className="font-proxima text-sm md:text-[18px]">+91 7004099889</p>
         </div>
-        <div className="flex flex-col gap-y-2">
-          <h3 className="text-[34px] pb-2"> Navigate </h3>
+        <div className="flex flex-col gap-y-1 md:gap-y-2 w-full mt-8 sm:mt-0">
+          <h3 className="text-2xl md:text-[34px] pb-1 md:pb-2">Navigate</h3>
+
           <Link
             to="/verify-waste"
-            className="font-proxima text-[21px] h-[33px] border-b border-b-[#999] w-fit"
+            className="font-proxima text-base md:text-[21px] h-[28px] md:h-[33px] border-b border-b-[#999] w-fit"
           >
-            {" "}
-            Verify Waste{" "}
+            Verify Waste
           </Link>
           <Link
             to="/jobs"
-            className="font-proxima text-[21px] h-[33px] border-b border-b-[#999] w-fit"
+            className="font-proxima text-base md:text-[21px] h-[28px] md:h-[33px] border-b border-b-[#999] w-fit"
           >
-            {" "}
-            Seiso Job Board{" "}
+            Seiso Job Board
           </Link>
         </div>
-        <div className="flex flex-col gap-y-2">
-          <h3 className="text-[34px] pb-2"> Follow us </h3>
-          <div className="flex gap-10">
+        <div className="flex flex-col gap-y-1 md:gap-y-2 w-full mt-8 lg:mt-0">
+          <h3 className="text-2xl md:text-[34px] pb-1 md:pb-2">Follow us</h3>
+          <div className="flex gap-6 md:gap-10">
             <a
               href="https://www.instagram.com/seiso.in_/"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-proxima text-[21px] h-[33px] border-b border-b-[#999] w-fit"
+              className="font-proxima text-base md:text-[21px] h-[28px] md:h-[33px] border-b border-b-[#999] w-fit flex items-center"
             >
-              <Instagram />
+              <Instagram size={24} className="md:size-6" />
             </a>
             <a
               href="https://www.facebook.com/profile.php?id=61576157545684"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-proxima text-[21px] h-[33px] border-b border-b-[#999] w-fit"
+              className="font-proxima text-base md:text-[21px] h-[28px] md:h-[33px] border-b border-b-[#999] w-fit flex items-center"
             >
-              <Facebook />
+              <Facebook size={24} className="md:size-6" />
             </a>
             <a
               href="https://www.facebook.com/profile.php?id=61576157545684"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-proxima text-[21px] h-[33px] border-b border-b-[#999] w-fit"
+              className="font-proxima text-base md:text-[21px] h-[28px] md:h-[33px] border-b border-b-[#999] w-fit flex items-center"
             >
-              <Youtube />
+              <Youtube size={24} className="md:size-6" />
             </a>
           </div>
         </div>
       </div>
       <div className="h-1 bg-gradient-to-r to-black via-lime-200 from-lime-600"></div>
-      <div className="flex flex-col md:flex-row items-center justify-between lg:px-20 py-6 bg-black text-gray-300">
-        <p>&copy; 2025 Seiso Global. All Rights Reserved.</p>
-        <p>
+      <div className="flex flex-col md:flex-row items-center justify-between px-4 sm:px-8 lg:px-20 py-4 md:py-6 bg-black text-gray-300 text-xs md:text-base gap-2 md:gap-0">
+        <p className="text-center md:text-left">
+          &copy; 2025 Seiso Global. All Rights Reserved.
+        </p>
+        <p className="text-center md:text-right">
           Designed by{" "}
-          <span className="text-xl font-semibold">Jayesh Yadav</span>.
+          <span className="text-base md:text-xl font-semibold">
+            Jayesh Yadav
+          </span>
+          .
         </p>
       </div>
     </footer>
