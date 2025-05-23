@@ -1,6 +1,10 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 
+// Helper function for future input sanitization (if any input is added)
+// const isSafeInput = (str) =>
+// typeof str === "string" && /^[a-zA-Z0-9 _-]*$/.test(str);
+
 function Faq() {
   return (
     <div>

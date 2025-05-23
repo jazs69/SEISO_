@@ -99,6 +99,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Instagram, Facebook, Youtube } from "lucide-react";
 
+// Helper function for future input sanitization (if any input is added)
+// const isSafeInput = (str) =>
+//   typeof str === "string" && /^[a-zA-Z0-9 _\-@.]*$/.test(str);
+
 function Footer() {
   return (
     <footer>

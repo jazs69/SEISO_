@@ -4,8 +4,17 @@ const router = express.Router();
 const { authUser } = require("../middleware/auth");
 const User = require("../models/user");
 
+// Helper function to sanitize input
+function isSafeString(str) {
+  return typeof str === "string" && /^[a-zA-Z0-9-_]+$/.test(str);
+}
+
 router.post("/waste", async (req, res) => {
   const { wasteId, weight } = req.body;
+
+  if (!isSafeString(wasteId) || !isSafeString(weight)) {
+    return res.status(400).json({ message: "Invalid input format" });
+  }
 
   try {
     const newWaste = new Waste({ wasteId, weight });
@@ -18,6 +27,10 @@ router.post("/waste", async (req, res) => {
 
 router.get("varify-waste", authUser, async (req, res) => {
   const { wasteId } = req.query;
+
+  if (!isSafeString(wasteId)) {
+    return res.status(400).json({ message: "Invalid input format" });
+  }
 
   try {
     const waste = await Waste.findOne({ wasteId });

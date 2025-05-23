@@ -7,18 +7,30 @@ const LogoutButton = () => {
   const navigate = useNavigate();
   const { setUser } = useUser();
 
+  // Helper function to sanitize token (defensive)
+  const isSafeToken = (token) =>
+    typeof token === "string" &&
+    /^[A-Za-z0-9-_]+\.[A-Za-z0-9-_]+\.[A-Za-z0-9-_]+$/.test(token);
+
   const handleLogout = async () => {
     try {
       const token = localStorage.getItem("token");
+      if (token && !isSafeToken(token)) {
+        // Remove suspicious token
+        localStorage.removeItem("token");
+        setUser(null);
+        navigate("/login");
+        return;
+      }
 
       await axios.post(
         `${import.meta.env.VITE_BACKEND_URL}/api/users/logout`,
         {},
         {
           headers: {
-            Authorization: `Bearer ${token}`,
+            Authorization: token ? `Bearer ${token}` : "",
           },
-          withCredentials: true, // Only if you're using cookies
+          withCredentials: true,
         }
       );
 

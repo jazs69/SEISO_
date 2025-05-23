@@ -22,8 +22,15 @@ const Login = () => {
     });
   };
 
+  // Helper function to sanitize input (alphanumeric and underscore only for username)
+  const isSafeUsername = (username) => /^[a-zA-Z0-9_]+$/.test(username);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!isSafeUsername(formData.username)) {
+      setError("Username contains invalid characters.");
+      return;
+    }
     try {
       const res = await axios.post(
         `${import.meta.env.VITE_BACKEND_URL}/api/users/login`,

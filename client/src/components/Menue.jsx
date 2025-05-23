@@ -9,6 +9,10 @@ import LogoutButton from "./LogoutButton";
 function Menue({ setIsOpen }) {
   const { user } = useUser();
 
+  // Helper function to sanitize username (if displayed in the future)
+  const sanitizeUsername = (username) =>
+    typeof username === "string" ? username.replace(/[^a-zA-Z0-9_]/g, "") : "";
+
   return (
     <motion.div
       initial={{ opacity: 0, y: "100%" }}

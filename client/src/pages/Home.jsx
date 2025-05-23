@@ -5,6 +5,10 @@ import { ChevronRight } from "lucide-react";
 import Footer from "../components/Footer";
 
 function Home() {
+  // Helper function for future input sanitization (if any input is added)
+  // const isSafeInput = (str) =>
+  //   typeof str === "string" && /^[a-zA-Z0-9 _-]*$/.test(str);
+
   return (
     <div>
       {/* <Navbar /> */}

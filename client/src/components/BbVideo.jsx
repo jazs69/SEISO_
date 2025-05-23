@@ -1,6 +1,10 @@
 import React from "react";
 import Factora from "../assets/Factora.webm";
 
+// Helper function for future input sanitization (if any input is added)
+// const isSafeInput = (str) =>
+//   typeof str === "string" && /^[a-zA-Z0-9 _\-./]*$/.test(str);
+
 function BbVideo() {
   return (
     <video

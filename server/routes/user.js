@@ -6,9 +6,17 @@ const generateToken = require("../utils/jwtToken");
 const BlacklistToken = require("../models/blacklistToken");
 const { authUser } = require("../middleware/auth");
 
+// Helper function to sanitize input
+function sanitizeUsername(username) {
+  return typeof username === "string" && /^[a-zA-Z0-9_]+$/.test(username);
+}
+
 router.post("/register", async (req, res) => {
   const { firstname, lastname, username, phone, password } = req.body;
   try {
+    if (!sanitizeUsername(username)) {
+      return res.status(400).json({ msg: "Invalid username format" });
+    }
     const existingUser = await User.findOne({ username });
     if (existingUser)
       return res.status(400).json({ msg: "User already exists" });
@@ -30,6 +38,9 @@ router.post("/register", async (req, res) => {
 router.post("/login", async (req, res) => {
   const { username, password } = req.body;
   try {
+    if (!sanitizeUsername(username)) {
+      return res.status(400).json({ msg: "Invalid credentials" });
+    }
     const user = await User.findOne({ username });
     if (!user) return res.status(400).json({ msg: "Invalid credentials" });
     const isMatch = await bcrypt.compare(password, user.password);

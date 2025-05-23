@@ -5,6 +5,7 @@ const userRoutes = require("./routes/user");
 const cors = require("cors");
 const wasteRoutes = require("./routes/waste");
 const cookieParser = require("cookie-parser");
+const mongoSanitize = require("express-mongo-sanitize");
 
 const app = express();
 
@@ -12,6 +13,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
+app.use(mongoSanitize());
 
 // Connect to the database
 connectDB()

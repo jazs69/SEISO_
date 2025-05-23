@@ -6,6 +6,10 @@ import Menue from "./Menue";
 import { AnimatePresence } from "framer-motion";
 import { useUser } from "../context/UserContext";
 
+// Helper function to sanitize username (if displayed in the future)
+// const sanitizeUsername = (username) =>
+//   typeof username === "string" ? username.replace(/[^a-zA-Z0-9_]/g, "") : "";
+
 const Navbar = () => {
   const { user } = useUser();
   const [isOpen, setIsOpen] = useState(false);
@@ -36,7 +40,9 @@ const Navbar = () => {
             {!user ? (
               "Login"
             ) : (
-              <div className="h-15 w-15 border-2 border-white rounded-[50%]"></div>
+              <div className="h-15 w-15 border-2 border-white rounded-[50%]">
+                {/* If you ever display username, use: {sanitizeUsername(user.username)} */}
+              </div>
             )}
           </Link>
         </div>
