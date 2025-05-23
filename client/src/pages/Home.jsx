@@ -89,7 +89,11 @@ function Home() {
                 <p className="text-[18px] font-proxima opacity-75">02</p>
                 <p className="text-[48px] sm:text-[72px] lg:text-[110px] font-bold leading-[1.15em] pt-[40px]">
                   {" "}
-                  Cleanliness, Made Effortless{" "}
+                  Cleanlin
+                  <br className="lg:block xl:hidden" />
+                  ess, Made Effortle
+                  <br className="lg:block xl:hidden" />
+                  ss{" "}
                 </p>
               </div>
               <div className="p-[10%] bg-midnight font-proxima text-[white]">
@@ -117,7 +121,9 @@ function Home() {
                 <p className="text-[18px] font-proxima opacity-75">03</p>
                 <p className="text-[48px] sm:text-[72px] lg:text-[110px] font-bold leading-[1.15em] pt-[40px]">
                   {" "}
-                  Technology That Serves the Planet{" "}
+                  Technol
+                  <br className="lg:block xl:hidden" />
+                  ogy That Serves the Planet{" "}
                 </p>
               </div>
               <div className="p-[10%] bg-midnight font-proxima text-[white]">
