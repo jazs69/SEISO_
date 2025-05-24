@@ -13,16 +13,13 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
-app.use(
-  mongoSanitize({
-    onSanitize: ({ req, key }) => {
-      // Only sanitize req.body and req.params, not req.query
-      // This avoids the TypeError on req.query
-    },
-    replaceWith: "_",
-    allowDots: true,
-  })
-);
+
+app.use((req, res, next) => {
+  // Manually sanitize user input (only body and params)
+  req.body = mongoSanitize.sanitize(req.body);
+  req.params = mongoSanitize.sanitize(req.params);
+  next();
+});
 
 // Connect to the database
 connectDB()
@@ -39,7 +36,6 @@ app.use(
     credentials: true, // Allow cookies to be sent
   })
 );
-app.use(express.json());
 
 // Routes
 app.get("/", (req, res) => {
