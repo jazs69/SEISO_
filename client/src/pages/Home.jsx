@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 import Footer from "../components/Footer";
 
 function Home() {
-  // Helper function for future input sanitization (if any input is added)
-  // const isSafeInput = (str) =>
-  //   typeof str === "string" && /^[a-zA-Z0-9 _-]*$/.test(str);
+  // Ref for the animated span
+  const earnRef = useRef(null);
+
+  useEffect(() => {
+    if (earnRef.current) {
+      earnRef.current.classList.add("animate__animated", "animate__backInDown");
+    }
+  }, []);
 
   return (
     <div>
@@ -21,13 +26,13 @@ function Home() {
                 Creating waste into opportunity.
               </p>
               <p className="mt-[10%] sm:mt-[46px] text-[45px] md:text-[80px] lg:text-[98px] leading-snug sm:leading-tight w-[80%] sm:w-[100%] lg:max-w-[1024px]">
-                Use Seiso & Earn.
+                Use Seiso & <span className="text-green-500">Earn</span>.
                 <br /> One Bin at a time.
               </p>
               <div className="flex w-[180px] sm:w-[270px] h-[50px] lg:h-[65px] border-[white] border-t-[2px] sm:border-t-[3px] mt-[20%] sm:mt-[100px] group cursor-pointer">
                 <Link
                   to="/verify-waste"
-                  className="flex items-center justify-baseline gap-3 hover:gap-7 self-end text-[18px] sm:text-[28px] transition-all duration-300"
+                  className="flex items-center justify-baseline gap-3 hover:gap-7 self-end text-[18px] sm:text-[28px] transition-all duration-300 animate__animated animate__pulse animate__infinite"
                 >
                   <div>Verify waste</div>
                   <ChevronRight size={28} />
