@@ -39,8 +39,8 @@ function Menue({ setIsOpen }) {
           {!user ? (
             "Login"
           ) : (
-            <div className="flex items-center space-x-2">
-              <div className="h-10 w-10 border-2 border-white rounded-full flex items-center justify-center">
+            <div className="flex items-center space-x-2 font-mono">
+              <div className="h-10 w-10 border-2 border-lime-700 rounded-full flex items-center justify-center">
                 {/* Avatar or icon can go here */}
               </div>
               <p>{sanitizeUsername(user.username)}</p>
@@ -87,14 +87,14 @@ function Menue({ setIsOpen }) {
         >
           FAQ's
         </Link>
-        <Link
+        {/* <Link
           to="/jobs"
           onClick={() => setIsOpen(false)}
           className="animate__animated animate__backInLeft animate__delay-0.4s"
           style={{ animationDelay: "0.4s" }}
         >
           Jobs
-        </Link>
+        </Link> */}
         {user && (
           <LogoutButton
             className="animate__animated animate__backInLeft animate__delay-0.5s"
