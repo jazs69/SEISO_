@@ -48,7 +48,7 @@ function Menue({ setIsOpen }) {
           )}
         </Link>
       </div>
-      <div className="flex flex-col items-center justify-center h-full space-y-8 text-3xl mt-20">
+      <div className="flex flex-col items-center justify-center h-full space-y-8 text-3xl mt-0">
         <Link
           to="/"
           onClick={() => setIsOpen(false)}
