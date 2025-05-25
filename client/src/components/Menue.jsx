@@ -5,6 +5,7 @@ import { useUser } from "../context/UserContext";
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
 import LogoutButton from "./LogoutButton";
+import "animate.css";
 
 function Menue({ setIsOpen }) {
   const { user } = useUser();
@@ -32,26 +33,53 @@ function Menue({ setIsOpen }) {
 
       {/* Navigation Links */}
       <div className="flex flex-col items-center justify-center h-full space-y-8 text-3xl">
-        <Link to="/" onClick={() => setIsOpen(false)}>
+        <Link
+          to="/"
+          onClick={() => setIsOpen(false)}
+          className="animate__animated animate__backInLeft animate__delay-0s"
+        >
           Home
         </Link>
         <Link
           to="/Login"
           onClick={() => setIsOpen(false)}
-          className={`${user ? "hidden" : ""}`}
+          className={`${
+            user ? "hidden" : ""
+          } animate__animated animate__backInLeft animate__delay-0.1s`}
+          style={{ animationDelay: "0.1s" }}
         >
           Login
         </Link>
-        <Link to="/faq" onClick={() => setIsOpen(false)}>
+        <Link
+          to="/faq"
+          onClick={() => setIsOpen(false)}
+          className="animate__animated animate__backInLeft animate__delay-0.2s"
+          style={{ animationDelay: "0.2s" }}
+        >
           FAQ
         </Link>
-        <Link to="/verify-waste" onClick={() => setIsOpen(false)}>
+        <Link
+          to="/verify-waste"
+          onClick={() => setIsOpen(false)}
+          className="animate__animated animate__backInLeft animate__delay-0.3s"
+          style={{ animationDelay: "0.3s" }}
+        >
           Verify Waste
         </Link>
-        <Link to="/jobs" onClick={() => setIsOpen(false)}>
+        <Link
+          to="/jobs"
+          onClick={() => setIsOpen(false)}
+          className="animate__animated animate__backInLeft animate__delay-0.4s"
+          style={{ animationDelay: "0.4s" }}
+        >
           Jobs
         </Link>
-        <LogoutButton />
+        {user && (
+          <LogoutButton
+            className="animate__animated animate__backInLeft animate__delay-0.5s"
+            style={{ animationDelay: "0.5s" }}
+          />
+        )}
       </div>
     </motion.div>
   );
