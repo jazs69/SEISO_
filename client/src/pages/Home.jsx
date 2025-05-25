@@ -1,19 +1,10 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 import Footer from "../components/Footer";
 
 function Home() {
-  // Ref for the animated span
-  const earnRef = useRef(null);
-
-  useEffect(() => {
-    if (earnRef.current) {
-      earnRef.current.classList.add("animate__animated", "animate__backInDown");
-    }
-  }, []);
-
   return (
     <div>
       {/* <Navbar /> */}

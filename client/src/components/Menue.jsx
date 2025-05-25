@@ -20,7 +20,7 @@ function Menue({ setIsOpen }) {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, x: "100%" }}
       transition={{ type: "tween", duration: 0.3 }}
-      className="fixed bg-[#151515] w-screen h-screen top-0 left-0 z-50 text-white"
+      className="fixed bg-[#151515] w-screen h-screen top-0 left-0 z-50 text-white font-mono tracking-wider"
     >
       {/* Close Button */}
       <button
@@ -30,41 +30,62 @@ function Menue({ setIsOpen }) {
       >
         <X size={28} />
       </button>
-
-      {/* Navigation Links */}
-      <div className="flex flex-col items-center justify-center h-full space-y-8 text-3xl">
+      <div className="pt-14 pl-4">
+        <Link
+          to={user ? "/profile" : "/login"}
+          className="hover:text-gray-300 font-mono tracking-wider text-3xl"
+          onClick={() => setIsOpen(false)}
+        >
+          {!user ? (
+            "Login"
+          ) : (
+            <div className="flex items-center space-x-2">
+              <div className="h-10 w-10 border-2 border-white rounded-full flex items-center justify-center">
+                {/* Avatar or icon can go here */}
+              </div>
+              <p>{sanitizeUsername(user.username)}</p>
+            </div>
+          )}
+        </Link>
+      </div>
+      <div className="flex flex-col items-center justify-center h-full space-y-8 text-3xl mt-20">
         <Link
           to="/"
           onClick={() => setIsOpen(false)}
-          className="animate__animated animate__backInLeft animate__delay-0s"
+          className="animate__animated animate__backInLeft animate__delay-0s font-mono tracking-wider"
         >
           Home
         </Link>
         <Link
-          to="/Login"
+          to="/dashboard"
           onClick={() => setIsOpen(false)}
-          className={`${
-            user ? "hidden" : ""
-          } animate__animated animate__backInLeft animate__delay-0.1s`}
-          style={{ animationDelay: "0.1s" }}
+          className="animate__animated animate__backInLeft animate__delay-0s font-mono tracking-wider"
         >
-          Login
-        </Link>
-        <Link
-          to="/faq"
-          onClick={() => setIsOpen(false)}
-          className="animate__animated animate__backInLeft animate__delay-0.2s"
-          style={{ animationDelay: "0.2s" }}
-        >
-          FAQ
+          Dashboard
         </Link>
         <Link
           to="/verify-waste"
           onClick={() => setIsOpen(false)}
           className="animate__animated animate__backInLeft animate__delay-0.3s"
-          style={{ animationDelay: "0.3s" }}
+          style={{ animationDelay: "0.1s" }}
         >
           Verify Waste
+        </Link>
+        <Link
+          to="/about-us"
+          onClick={() => setIsOpen(false)}
+          className="animate__animated animate__backInLeft animate__delay-0.2s"
+          style={{ animationDelay: "0.2s" }}
+        >
+          About us
+        </Link>
+        <Link
+          to="/faq"
+          onClick={() => setIsOpen(false)}
+          className="animate__animated animate__backInLeft animate__delay-0.2s"
+          style={{ animationDelay: "0.3s" }}
+        >
+          FAQ's
         </Link>
         <Link
           to="/jobs"

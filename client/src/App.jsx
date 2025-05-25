@@ -7,6 +7,7 @@ import Dashboard from "./pages/Dashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
 import VerifyWaste from "./pages/VerifyWaste";
 import Faq from "./pages/Faq";
+import Profile from "./pages/Profile";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Route path="/register" element={<Register />} />
       <Route path="/login" element={<Login />} />
       <Route path="/faq" element={<Faq />} />
+      <Route path="/about-us" element={<Faq />} />
 
       <Route
         path="/dashboard"
@@ -29,6 +31,14 @@ function App() {
         element={
           <ProtectedRoute>
             <VerifyWaste />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/profile"
+        element={
+          <ProtectedRoute>
+            <Profile />
           </ProtectedRoute>
         }
       />
